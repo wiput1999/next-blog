@@ -1,2 +1,8 @@
 const withTypescript = require('@zeit/next-typescript')
-module.exports = withTypescript()
+module.exports = withTypescript({
+  async exportPathMap () {
+    return  {
+      '/': { page: '/' }
+    }
+  }
+})
